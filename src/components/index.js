@@ -95,43 +95,29 @@ class FormEntry extends React.Component {
 	render() {
 		return (
 			<div>
-			<h1> Part Estimation Form </h1>
 				<form>
-
-					<div className="wrapper">
-					<label>Diameter:</label>					
-						<Dropdown
-							title="Select diameter"
-							list = {this.state.fruit}
-							resetThenSet={this.resetThenSet}
-						/>
-					</div>
-
-					<div className="wrapper">
-					<label>Part:</label>
-						<Dropdown
-							title="Select part"
-							list = {this.state.fruit}
-							resetThenSet={this.resetThenSet}
-						/>
-					</div>
-		
+					<h1>"Hello, World!"</h1>
+					<label>"Diameter"</label>
 					
 					<div className="wrapper">
-					<label>Lengths:</label>
-							<Dropdown
-								title="Select length"
-								list = {this.state.fruit}
-								resetThenSet={this.resetThenSet}
-							/>
-						</div>
-
-					<div>
-					<label>Price:  ${this.state.price}</label>
+						<Dropdown
+							title="Select fruit"
+							list = {this.state.fruit}
+							resetThenSet={this.resetThenSet}
+						/>
 					</div>
-
-					<br></br>
-					<label>Total: ${this.state.total}</label>
+					/*
+					<label>{this.state.diameter}</label>
+					<label>"Part"</label>
+					<label>{this.state.part}</label>
+					<label>"Lengths"</label>
+					<label>{this.state.options}</label>
+					<label>"Price: " {this.state.price}</label>
+					<label>"Quantity: "</label>
+					<label>{this.state.quantity}</label>
+					<label>"Total: "</label>
+					<label>{this.state.total}</label>
+					*/
 				</form>
 			</div>
 		);
