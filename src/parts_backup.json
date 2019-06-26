@@ -1,0 +1,159 @@
+
+{
+	"parts" : [
+		
+		{
+			"diameter" : 1,
+			"category" : [
+				{
+					"name" : "Tube", 
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "Ferrules",
+					"options" : [],
+					 "price" : 1,
+					 "quantity": 0,
+					 "total" : 0
+				},
+				{
+					"name" : "Tees",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "4 Ways",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "Elbows",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				}]
+		},
+		{
+			"diameter" : 1.5,
+			"category" : [
+				{
+					"name" : "Tube", 
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "Ferrules",
+					"options" : [],
+					 "price" : 1,
+					 "quantity": 0,
+					 "total" : 0
+				},
+				{
+					"name" : "Tees",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "4 Ways",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "Elbows",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				}]
+		},
+		{
+		"diameter" : 2,
+		"category" : [
+				{
+					"name" : "Tube", 
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "Ferrules",
+					"options" : [],
+					 "price" : 1,
+					 "quantity": 0,
+					 "total" : 0
+				},
+				{
+					"name" : "Tees",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "4 Ways",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				},
+				{
+					"name" : "Elbows",
+					"options" : [],
+					"price" : 1,
+					"quantity": 0,
+					"total" : 0
+				}]
+		},
+		{
+		"diameter" : 2.5,
+		"category" : [
+			{
+				"name" : "Tube",
+				"options" : [],
+				"price" : 1,
+				"quantity": 0,
+				"total" : 0
+			},
+			{
+				"name" : "Ferrules",
+				"options" : [],
+				"price" : 1,
+				"quantity": 0,
+				"total" : 0
+			}]
+		},
+		{
+		"diameter" : 3,
+		"category" : [
+			{
+				"name" : "Tube",
+				"options" : [],
+				"price" : 1,
+				"quantity": 0,
+				"total" : 0
+			},
+			{
+				"name" : "Ferrules",
+				"options" : [],
+				"price" : 1,
+				"quantity": 0,
+				"total" : 0
+			}]
+		}
+	]
+}
