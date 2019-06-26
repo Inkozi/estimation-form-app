@@ -1,12 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 import Dropdown from './Dropdown.js';
 
 var data = require("./parts.json");
-
 
 
 function getDiameters(){
@@ -33,7 +28,18 @@ function getParts(){
 var items = [1,2,3,4,5,6];
 
 
-class FormEntry extends React.Component {
+const ColorLine = ({ color }) =>(
+	<hr
+		style={{
+			color: color,
+			BackgroundColor: color,
+			height: 5
+		}}
+	/>
+
+);
+
+class Form extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0, fruit: [
@@ -95,33 +101,49 @@ class FormEntry extends React.Component {
 	render() {
 		return (
 			<div>
+			<h1> Part Estimation Form </h1>
+			<ColorLine color="black" />
 				<form>
-					<h1>"Hello, World!"</h1>
-					<label>"Diameter"</label>
-					
+
 					<div className="wrapper">
+					<label>Diameter:</label>					
 						<Dropdown
-							title="Select fruit"
+							title="Select diameter"
 							list = {this.state.fruit}
 							resetThenSet={this.resetThenSet}
 						/>
 					</div>
-					/*
-					<label>{this.state.diameter}</label>
-					<label>"Part"</label>
-					<label>{this.state.part}</label>
-					<label>"Lengths"</label>
-					<label>{this.state.options}</label>
-					<label>"Price: " {this.state.price}</label>
-					<label>"Quantity: "</label>
-					<label>{this.state.quantity}</label>
-					<label>"Total: "</label>
-					<label>{this.state.total}</label>
-					*/
+
+					<div className="wrapper">
+					<label>Part:</label>
+						<Dropdown
+							title="Select part"
+							list = {this.state.fruit}
+							resetThenSet={this.resetThenSet}
+						/>
+					</div>
+		
+					
+					<div className="wrapper">
+					<label>Lengths:</label>
+							<Dropdown
+								title="Select length"
+								list = {this.state.fruit}
+								resetThenSet={this.resetThenSet}
+							/>
+						</div>
+
+					<div>
+					<label>Price:  ${this.state.price}</label>
+					</div>
+
+					<br></br>
+					<label>Total: ${this.state.total}</label>
 				</form>
 			</div>
 		);
 	}
 }
 
-ReactDOM.render(<FormEntry />, document.getElementById('root'));
+export default Form
+
