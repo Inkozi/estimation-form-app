@@ -43,44 +43,6 @@ const ColorLine = ({ color }) =>(
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
-		this.form = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0, fruit: [
-        {
-          id: 0,
-          title: 'Apple',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 1,
-          title: 'Orange',
-
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 2,
-          title: 'Grape',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 3,
-          title: 'Pomegranate',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 4,
-          title: 'Strawberry',
-          selected: false,
-          key: 'fruit'
-        }
-      ]
-		}
-
-
-
-
 		this.state = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0, fruit: [
         {
           id: 0,
@@ -116,11 +78,21 @@ class Form extends React.Component {
       ]
 		}
 
-	}
+
+	//this.state = [this.form];
+
+}
 
 
 
-	//polls for state selection that other state values depend on.
+	
+
+	/*
+	 *
+	 *	fxn : polls
+	 *		state selection that other state values depend on
+	 *
+	 */
 	poll(){
 		for (var i = 0; i < items.length; i++){
 			if (this.state.diameter == i){
@@ -130,6 +102,23 @@ class Form extends React.Component {
 		}
 	}
 
+
+	toggleSelected = (id, key) => {
+		let temp = JSON.parse(JSON.stringify(this.state[key]))
+		temp[id].selected = !temp[id].selected
+		this.setState({
+			[key]: temp
+		})
+	}
+
+
+	/*
+	 *
+	 *	fxn : resetThenSet
+	 *		resets the set value
+	 *
+	 *
+	 */
 	resetThenSet = (id, key) => {
 		let temp = JSON.parse(JSON.stringify(this.state[key]))
 		temp.forEach(item => item.selected = false);

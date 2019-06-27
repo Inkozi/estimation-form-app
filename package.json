@@ -8,6 +8,7 @@
     "react-fontawesome": "^1.6.1",
     "react-jsonschema-form": "^1.6.1",
     "react-numeric-input": "^2.2.3",
+    "react-onclickoutside": "^6.8.0",
     "react-scripts": "3.0.1"
   },
   "scripts": {
