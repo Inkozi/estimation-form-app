@@ -1,6 +1,7 @@
 import React from 'react';
 import Dropdown from './Dropdown.js';
-
+import NumberBox from './NumberBox.js';
+import '../styles/form.css';
 var data = require("./parts.json");
 
 
@@ -76,7 +77,10 @@ class Form extends React.Component {
         }
       ]
 		}
+
 	}
+
+
 
 	//polls for state selection that other state values depend on.
 	poll(){
@@ -106,7 +110,9 @@ class Form extends React.Component {
 				<form>
 
 					<div className="wrapper">
-					<label>Diameter:</label>					
+						<div className="dd-label">
+							<p>Diameter:</p>
+						</div>
 						<Dropdown
 							title="Select diameter"
 							list = {this.state.fruit}
@@ -115,7 +121,9 @@ class Form extends React.Component {
 					</div>
 
 					<div className="wrapper">
-					<label>Part:</label>
+						<div className="dd-label">
+							<p>Part:</p>
+						</div>
 						<Dropdown
 							title="Select part"
 							list = {this.state.fruit}
@@ -125,7 +133,9 @@ class Form extends React.Component {
 		
 					
 					<div className="wrapper">
-					<label>Lengths:</label>
+						<div className="dd-label">
+							<p>Lengths:</p>
+						</div>
 							<Dropdown
 								title="Select length"
 								list = {this.state.fruit}
@@ -133,12 +143,21 @@ class Form extends React.Component {
 							/>
 						</div>
 
-					<div>
-					<label>Price:  ${this.state.price}</label>
+
+					<div className="dd-label">
+					<p> Quantity: </p>
+					<NumberBox />
 					</div>
 
-					<br></br>
-					<label>Total: ${this.state.total}</label>
+					<ColorLine color="black" />
+
+					<div className="results">
+					<p>Price:  ${this.state.price}</p>
+					</div>
+
+					<div className="total">
+					<p>Total: ${this.state.total}</p>
+					</div>
 				</form>
 			</div>
 		);
