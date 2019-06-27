@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import '../styles/number.css'
 
 class NumberBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: '0'
+      number: ''
     }
   }
   
