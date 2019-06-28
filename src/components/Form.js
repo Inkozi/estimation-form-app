@@ -2,28 +2,7 @@ import React from 'react';
 import Dropdown from './Dropdown.js';
 import NumberBox from './NumberBox.js';
 import '../styles/form.css';
-var data = require("./parts.json");
 
-
-function getDiameters(){
-	var diameters = [];
-	data.parts.forEach(item => (
-		diameters.push(item.diameter)
-	));
-	return diameters;
-}
-
-function getParts(){
-	var parts = [];
-	for(var item in data.parts) {
-		for (var partName in item.category){
-			if (!parts.includes(partName.name)){
-					parts.push(partName.name);
-			}
-		}
-	}
-	return parts
-}
 
 //items TODO get rid of this
 var items = [1,2,3,4,5,6];
@@ -78,7 +57,6 @@ class Form extends React.Component {
 		  ]
 		}
 
-	this.form = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0}
 
 }
 
