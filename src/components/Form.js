@@ -101,6 +101,7 @@ class Form extends React.Component {
 		temp[id].selected = true;
 		this.setState({
 			[key]: temp
+
 		})
 	}
 
@@ -108,59 +109,59 @@ class Form extends React.Component {
 	render() {
 		return (
 			<div>
-			<h1> Part Estimation Form </h1>
-			<ColorLine color="black" />
-				<form>
+				<h1> Part Estimation Form </h1>
+				<ColorLine color="black" />
+					<form>
 
-					<div className="wrapper">
-						<div className="dd-label">
-							<p>Diameter:</p>
-						</div>
-						<Dropdown
-							title="Select diameter"
-							list = {this.state.fruit}
-							resetThenSet={this.resetThenSet}
-						/>
-					</div>
-
-					<div className="wrapper">
-						<div className="dd-label">
-							<p>Part:</p>
-						</div>
-						<Dropdown
-							title="Select part"
-							list = {this.state.fruit}
-							resetThenSet={this.resetThenSet}
-						/>
-					</div>
-		
-					
-					<div className="wrapper">
-						<div className="dd-label">
-							<p>Length:</p>
-						</div>
+						<div className="wrapper">
+							<div className="dd-label">
+								<p>Diameter:</p>
+							</div>
 							<Dropdown
-								title="Select length"
+								title="Select diameter"
 								list = {this.state.fruit}
 								resetThenSet={this.resetThenSet}
 							/>
 						</div>
 
-
-					<div className="wrapper">
-						<div className="dd-label">
-							<p> Quantity: </p>
+						<div className="wrapper">
+							<div className="dd-label">
+								<p>Part:</p>
+							</div>
+							<Dropdown
+								title="Select part"
+								list = {this.state.fruit}
+								resetThenSet={this.resetThenSet}
+							/>
 						</div>
-						<NumberBox />
-					</div>
+			
+						
+						<div className="wrapper">
+							<div className="dd-label">
+								<p>Length:</p>
+							</div>
+								<Dropdown
+									title="Select length"
+									list = {this.state.fruit}
+									resetThenSet={this.resetThenSet}
+								/>
+						</div>
 
-					<ColorLine color="black" />
 
-					<div className="results">
-						<p>Price:  ${this.state.price}</p>
-					</div>
-					
-				</form>
+						<div className="wrapper">
+							<div className="dd-label">
+								<p> Quantity: </p>
+							</div>
+							<NumberBox />
+						</div>
+
+						<ColorLine color="black" />
+
+						<div className="results">
+							<p>Price:  ${this.state.price}</p>
+						</div>
+						
+					</form>
 			</div>
 		);
 	}
