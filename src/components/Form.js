@@ -43,49 +43,65 @@ const ColorLine = ({ color }) =>(
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0, fruit: [
-        {
-          id: 0,
-          title: 'Apple',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 1,
-          title: 'Orange',
+			this.state = {fruit: [
+			{
+			  id: 0,
+			  title: 'Apple',
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 1,
+			  title: 'Orange',
 
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 2,
-          title: 'Grape',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 3,
-          title: 'Pomegranate',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 4,
-          title: 'Strawberry',
-          selected: false,
-          key: 'fruit'
-        }
-      ]
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 2,
+			  title: 'Grape',
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 3,
+			  title: 'Pomegranate',
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 4,
+			  title: 'Strawberry',
+			  selected: false,
+			  key: 'fruit'
+			}
+		  ]
 		}
 
-
-	//this.state = [this.form];
+	this.form = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0}
 
 }
 
 
+	handleSubmit(evt){
+		alert("TODO this later")
+	}
 
-	
+
+	handleAdd(){
+		this.form = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0}
+		/*
+		this.setState({
+			forms: this.state.forms.concat([{ this.form }])
+		});*/
+	}
+
+	handleRemove(idx){
+		/*
+		this.setState({
+			forms: this.state.forms.filter((s, sidx) => idx !== sidx)
+		});*/
+	}
 
 	/*
 	 *
@@ -103,6 +119,12 @@ class Form extends React.Component {
 	}
 
 
+	/*
+	 *
+	 *	fxn : toggleSelected
+	 *		@param id
+	 *		@param key
+	 */
 	toggleSelected = (id, key) => {
 		let temp = JSON.parse(JSON.stringify(this.state[key]))
 		temp[id].selected = !temp[id].selected
@@ -187,6 +209,21 @@ class Form extends React.Component {
 					<div className="total">
 					<p>Total: ${this.state.total}</p>
 					</div>
+					
+					<button
+						type="button"
+						onClick={this.handleRemove(1)}
+						className="small">
+						Remove Item
+					</button>
+
+					<button
+						type="button"
+						onClick={this.add}
+						className="small">
+						Add Item
+					</button>
+		
 				</form>
 			</div>
 		);
