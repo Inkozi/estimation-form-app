@@ -3,11 +3,6 @@ import Dropdown from './Dropdown.js';
 import NumberBox from './NumberBox.js';
 import '../styles/form.css';
 
-
-//items TODO get rid of this
-var items = [1,2,3,4,5,6];
-
-
 const ColorLine = ({ color }) =>(
 	<hr
 		style={{
@@ -88,7 +83,7 @@ class Form extends React.Component {
 	 *
 	 */
 	poll(){
-		for (var i = 0; i < items.length; i++){
+		for (var i = 0; i < 6; i++){
 			if (this.state.diameter == i){
 				var idx = this.props[i];
 				var part = idx.category[i];
@@ -172,36 +167,18 @@ class Form extends React.Component {
 
 
 					<div className="wrapper">
-					<div className="dd-label">
-					<p> Quantity: </p>
-					</div>
-					<NumberBox />
+						<div className="dd-label">
+							<p> Quantity: </p>
+						</div>
+						<NumberBox />
 					</div>
 
 					<ColorLine color="black" />
 
 					<div className="results">
-					<p>Price:  ${this.state.price}</p>
-					</div>
-
-					<div className="total">
-					<p>Total: ${this.state.total}</p>
+						<p>Price:  ${this.state.price}</p>
 					</div>
 					
-					<button
-						type="button"
-						onClick={this.handleRemove(1)}
-						className="small">
-						Remove Item
-					</button>
-
-					<button
-						type="button"
-						onClick={this.add}
-						className="small">
-						Add Item
-					</button>
-		
 				</form>
 			</div>
 		);
