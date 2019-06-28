@@ -2,28 +2,7 @@ import React from 'react';
 import Dropdown from './Dropdown.js';
 import NumberBox from './NumberBox.js';
 import '../styles/form.css';
-var data = require("./parts.json");
 
-
-function getDiameters(){
-	var diameters = [];
-	data.parts.forEach(item => (
-		diameters.push(item.diameter)
-	));
-	return diameters;
-}
-
-function getParts(){
-	var parts = [];
-	for(var item in data.parts) {
-		for (var partName in item.category){
-			if (!parts.includes(partName.name)){
-					parts.push(partName.name);
-			}
-		}
-	}
-	return parts
-}
 
 //items TODO get rid of this
 var items = [1,2,3,4,5,6];
@@ -43,49 +22,64 @@ const ColorLine = ({ color }) =>(
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0, fruit: [
-        {
-          id: 0,
-          title: 'Apple',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 1,
-          title: 'Orange',
+			this.state = {fruit: [
+			{
+			  id: 0,
+			  title: 'Apple',
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 1,
+			  title: 'Orange',
 
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 2,
-          title: 'Grape',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 3,
-          title: 'Pomegranate',
-          selected: false,
-          key: 'fruit'
-        },
-        {
-          id: 4,
-          title: 'Strawberry',
-          selected: false,
-          key: 'fruit'
-        }
-      ]
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 2,
+			  title: 'Grape',
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 3,
+			  title: 'Pomegranate',
+			  selected: false,
+			  key: 'fruit'
+			},
+			{
+			  id: 4,
+			  title: 'Strawberry',
+			  selected: false,
+			  key: 'fruit'
+			}
+		  ]
 		}
 
-
-	//this.state = [this.form];
 
 }
 
 
+	handleSubmit(evt){
+		alert("TODO this later")
+	}
 
-	
+
+	handleAdd(){
+		this.form = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0}
+		/*
+		this.setState({
+			forms: this.state.forms.concat([{ this.form }])
+		});*/
+	}
+
+	handleRemove(idx){
+		/*
+		this.setState({
+			forms: this.state.forms.filter((s, sidx) => idx !== sidx)
+		});*/
+	}
 
 	/*
 	 *
@@ -103,6 +97,12 @@ class Form extends React.Component {
 	}
 
 
+	/*
+	 *
+	 *	fxn : toggleSelected
+	 *		@param id
+	 *		@param key
+	 */
 	toggleSelected = (id, key) => {
 		let temp = JSON.parse(JSON.stringify(this.state[key]))
 		temp[id].selected = !temp[id].selected
@@ -187,6 +187,21 @@ class Form extends React.Component {
 					<div className="total">
 					<p>Total: ${this.state.total}</p>
 					</div>
+					
+					<button
+						type="button"
+						onClick={this.handleRemove(1)}
+						className="small">
+						Remove Item
+					</button>
+
+					<button
+						type="button"
+						onClick={this.add}
+						className="small">
+						Add Item
+					</button>
+		
 				</form>
 			</div>
 		);

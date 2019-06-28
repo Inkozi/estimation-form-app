@@ -1,158 +1,438 @@
 
 {
+
+	"quantity": 0,
+	"total" : 0,
 	"parts" : [
-		
-		{
-			"diameter" : 1,
-			"category" : [
-				{
-					"name" : "Tube", 
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "Ferrules",
-					"options" : [],
-					 "price" : 1,
-					 "quantity": 0,
-					 "total" : 0
-				},
-				{
-					"name" : "Tees",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "4 Ways",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "Elbows",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				}]
-		},
-		{
-			"diameter" : 1.5,
-			"category" : [
-				{
-					"name" : "Tube", 
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "Ferrules",
-					"options" : [],
-					 "price" : 1,
-					 "quantity": 0,
-					 "total" : 0
-				},
-				{
-					"name" : "Tees",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "4 Ways",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "Elbows",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				}]
-		},
-		{
-		"diameter" : 2,
-		"category" : [
-				{
-					"name" : "Tube", 
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "Ferrules",
-					"options" : [],
-					 "price" : 1,
-					 "quantity": 0,
-					 "total" : 0
-				},
-				{
-					"name" : "Tees",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "4 Ways",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				},
-				{
-					"name" : "Elbows",
-					"options" : [],
-					"price" : 1,
-					"quantity": 0,
-					"total" : 0
-				}]
-		},
-		{
-		"diameter" : 2.5,
+	{
+		"id": 0,
+		"title": "1",
+		"selected": false,
+		"key": "diameter",
 		"category" : [
 			{
-				"name" : "Tube",
-				"options" : [],
-				"price" : 1,
-				"quantity": 0,
-				"total" : 0
+				"name" : "Tube", 
+				"option" : [
+					{
+						"id": 0,
+						"title": "0.065 Wall",
+						"price":"4.53",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
 			},
 			{
 				"name" : "Ferrules",
-				"options" : [],
-				"price" : 1,
-				"quantity": 0,
-				"total" : 0
+				"options" : [
+					{
+						"id": 0,
+						"title": "0.846 L",
+						"price": "3.75",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "1.125 L",
+						"price": "3.75",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 2,
+						"title": "3 L",
+						"price": "10",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Tees",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "18",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "Weld",
+						"price": "9",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "4 Ways",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "28",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Elbows",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover 180",
+						"price": "35",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "Triclover 90",
+						"price": "13",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 2,
+						"title": "Triclover 45",
+						"price": "12",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				
+				]
 			}]
 		},
 		{
-		"diameter" : 3,
+		"id": 1,
+		"title": "1.5",
+		"selected": false,
+		"key": "diameter",
 		"category" : [
 			{
-				"name" : "Tube",
-				"options" : [],
-				"price" : 1,
-				"quantity": 0,
-				"total" : 0
+				"name" : "Tube", 
+				"option" : [
+					{
+						"id": 0,
+						"title": "0.065 Wall",
+						"price":"3.58",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
 			},
 			{
 				"name" : "Ferrules",
-				"options" : [],
-				"price" : 1,
-				"quantity": 0,
-				"total" : 0
+				"options" : [
+					{
+						"id": 0,
+						"title": "0.846 L",
+						"price": "3.75",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "1.125 L",
+						"price": "3.75",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 2,
+						"title": "3",
+						"price": "11",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Tees",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "19",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "Weld",
+						"price": "9",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "4 Ways",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "27",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Elbows",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover 180",
+						"price": "37",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "Triclover 90",
+						"price": "15",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 2,
+						"title": "Triclover 45",
+						"price": "12.5",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				
+				]
+			}]
+		},
+		{
+	  	"id": 2,
+	  	"title": "2",
+	  	"selected": false,
+	  	"key": "diameter",
+		"category" : [
+			{
+				"name" : "Tube", 
+				"option" : [
+					{
+						"id": 0,
+						"title": "0.065 Wall",
+						"price":"4.53",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Ferrules",
+				"options" : [
+					{
+						"id": 0,
+						"title": "0.846 L",
+						"price": "4.25",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "1.125 L",
+						"price": "4.5",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 2,
+						"title": "3",
+						"price": "13",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Tees",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "25",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "Weld",
+						"price": "12",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "4 Ways",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "38",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Elbows",
+				"options" : [
+					{
+						"id": 1,
+						"title": "Triclover 90",
+						"price": "19.5",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 2,
+						"title": "Triclover 45",
+						"price": "15",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				
+				]
+			}]
+		},
+		{
+		"id": 3,
+		"title": "2.5",
+		"selected": false,
+		"key": "diameter",
+		"category" : [
+			{
+				"name" : "Tube",
+				"options" : [
+					{
+						"id": 0,
+						"title": "0.065 Wall",
+						"price": "4.53",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Ferrules",
+				"options" : [
+					{
+						"id": 0,
+						"title": "1.125\" L",
+						"price": "5.5",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			}]
+		},
+		{
+	  	"id": 4,
+	  	"title": "3",
+	  	"selected": false,
+	  	"key": "diameter",
+		"category" : [
+			{
+				"name" : "Tube",
+				"options" : [
+					{
+						"id": 0,
+						"title": "0.065 Wall",
+						"price": "4.53",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Ferrules",
+				"options" : [
+					{
+						"id": 0,
+						"title": "1.125\" L",
+						"price": "7",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Tees",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover",
+						"price": "39",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					},
+					{
+						"id": 1,
+						"title": "Weld",
+						"price": "10",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
+			},
+			{
+				"name" : "Elbows",
+				"options" : [
+					{
+						"id": 0,
+						"title": "Triclover 90",
+						"price": "31",
+						"unit": "foot",
+						"selected": false,
+						"key": "option"
+					}
+				]
 			}]
 		}
 	]
