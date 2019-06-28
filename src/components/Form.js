@@ -56,26 +56,6 @@ class Form extends React.Component {
 }
 
 
-	handleSubmit(evt){
-		alert("TODO this later")
-	}
-
-
-	handleAdd(){
-		this.form = {"diameter": 0, "name" : '', "options" : [], "price" : 1, "quantity": 0, "total" : 0}
-		/*
-		this.setState({
-			forms: this.state.forms.concat([{ this.form }])
-		});*/
-	}
-
-	handleRemove(idx){
-		/*
-		this.setState({
-			forms: this.state.forms.filter((s, sidx) => idx !== sidx)
-		});*/
-	}
-
 	/*
 	 *
 	 *	fxn : polls
@@ -108,6 +88,7 @@ class Form extends React.Component {
 
 
 	/*
+	 *
 	 *
 	 *	fxn : resetThenSet
 	 *		resets the set value
