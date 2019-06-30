@@ -9,8 +9,12 @@ class Data extends React.Component{
 		this.state = {
 			template : data,
 			templateData : [],
-			formData : []
+			formData : [],
+			total : 0
 		}
+		this.state.templateData.push(this.getDefaultTemplate());
+		this.state.formData.push(this.getDefaultForm());
+	//	console.log(this.state.formData[0]);
 	}
 
 	/*
@@ -20,8 +24,8 @@ class Data extends React.Component{
 	 *
 	 */
 	createEntry(){
-		this.templateData.push(this.getDefaultTemplate()); //copy new master tmeplate
-		this.formData.push(this.getDefaultForm()); //copy new model
+		this.state.templateData.push(this.getDefaultTemplate()); //copy new master tmeplate
+		this.state.formData.push(this.getDefaultForm()); //copy new model
 	}
 
 	/*
@@ -31,7 +35,7 @@ class Data extends React.Component{
 	 *
 	 */
 	getDefaultTemplate(){
-		return JSON.parse(JSON.stringify(this.template));
+		return JSON.parse(JSON.stringify(this.state.template));
 	}
 
 	/*
@@ -40,15 +44,15 @@ class Data extends React.Component{
 	 *		args : {obj} { foo : idx }
 	 */
 	getDefaultForm(){
-		let currIdx = this.templateData.length - 1;
+		let currIdx = this.state.templateData.length - 1;
 		let args = {"master" : currIdx, "diameter" : 0, "part" : 0};
 		let form = {
-				"master" : this.templateData[args.master],
-				"diameters" : this.templateData[args.master].parts,
-				"parts" : this.templateData[args.master].parts[args.diameter].category,
-				"lengths" : this.templateData[args.master].parts[args.diameter].category[args.part].option,
-				"quantity" : 0,
-				"total" : 0
+				master : this.state.templateData[args.master],
+				diameters : this.state.templateData[args.master].parts,
+				parts : this.state.templateData[args.master].parts[args.diameter].category,
+				lengths : this.state.templateData[args.master].parts[args.diameter].category[args.part].option,
+				quantity : 0,
+				total : 0
 		}
 		return form;
 	}
@@ -93,7 +97,7 @@ class Data extends React.Component{
 
 			<div className="data-wrapper">
 				<div className="form">
-					<Form />
+					<Form form={this.state.formData[0]} />
 				</div>
 
 				<div className="total">

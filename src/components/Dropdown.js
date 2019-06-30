@@ -5,7 +5,7 @@ import '../styles/global.css'
 
 class Dropdown extends Component{
 	constructor(props){
-		super(props)
+		super(props);
 		this.state = {
 			listOpen: false,
 			headerTitle: this.props.title

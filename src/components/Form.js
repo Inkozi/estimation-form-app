@@ -17,40 +17,12 @@ const ColorLine = ({ color }) =>(
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
-			this.state = {fruit: [
-			{
-			  id: 0,
-			  title: 'Apple',
-			  selected: false,
-			  key: 'fruit'
-			},
-			{
-			  id: 1,
-			  title: 'Orange',
+			console.log("Hey this is form!");
+			console.log(this.props.form);
+			console.log(this.props.form.parts);
+			console.log(this.props.form.diameters);
 
-			  selected: false,
-			  key: 'fruit'
-			},
-			{
-			  id: 2,
-			  title: 'Grape',
-			  selected: false,
-			  key: 'fruit'
-			},
-			{
-			  id: 3,
-			  title: 'Pomegranate',
-			  selected: false,
-			  key: 'fruit'
-			},
-			{
-			  id: 4,
-			  title: 'Strawberry',
-			  selected: false,
-			  key: 'fruit'
-			}
-		  ]
-		}
+			this.state = { form : this.props.form };
 
 
 }
@@ -119,7 +91,7 @@ class Form extends React.Component {
 							</div>
 							<Dropdown
 								title="Select diameter"
-								list = {this.state.fruit}
+								list = {this.state.form.diameters}
 								resetThenSet={this.resetThenSet}
 							/>
 						</div>
@@ -130,7 +102,7 @@ class Form extends React.Component {
 							</div>
 							<Dropdown
 								title="Select part"
-								list = {this.state.fruit}
+								list = {this.state.form.parts}
 								resetThenSet={this.resetThenSet}
 							/>
 						</div>
@@ -142,7 +114,7 @@ class Form extends React.Component {
 							</div>
 								<Dropdown
 									title="Select length"
-									list = {this.state.fruit}
+									list = {this.state.form.lengths}
 									resetThenSet={this.resetThenSet}
 								/>
 						</div>
