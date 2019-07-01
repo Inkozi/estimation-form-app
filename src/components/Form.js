@@ -11,21 +11,13 @@ const ColorLine = ({ color }) =>(
 			height: 5
 		}}
 	/>
-
 );
 
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
-			console.log("Hey this is form!");
-			console.log(this.props.form);
-			console.log(this.props.form.parts);
-			console.log(this.props.form.diameters);
-
 			this.state = { form : this.props.form };
-
-
-}
+	}
 
 
 	/*
@@ -106,8 +98,7 @@ class Form extends React.Component {
 								resetThenSet={this.resetThenSet}
 							/>
 						</div>
-			
-						
+								
 						<div className="wrapper">
 							<div className="dd-label">
 								<p>Length:</p>
@@ -118,7 +109,6 @@ class Form extends React.Component {
 									resetThenSet={this.resetThenSet}
 								/>
 						</div>
-
 
 						<div className="wrapper">
 							<div className="dd-label">
