@@ -50,7 +50,7 @@ class Data extends React.Component{
 				master : this.state.templateData[args.master],
 				diameters : this.state.templateData[args.master].parts,
 				parts : this.state.templateData[args.master].parts[args.diameter].category,
-				lengths : this.state.templateData[args.master].parts[args.diameter].category[args.part].option,
+				options : this.state.templateData[args.master].parts[args.diameter].category[args.part].option,
 				quantity : 0,
 				total : 0
 		}

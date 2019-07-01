@@ -8,12 +8,12 @@
 		"id": 0,
 		"title": "1",
 		"selected": false,
-		"key": "diameter",
+		"key": "diameters",
 		"category" : [
 			{
 				"id" : 0,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tube", 
 				"option" : [
 					{
@@ -22,14 +22,14 @@
 						"price":"4.53",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 1,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Ferrule",
 				"options" : [
 					{
@@ -38,7 +38,7 @@
 						"price": "3.75",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -46,7 +46,7 @@
 						"price": "3.75",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 2,
@@ -54,14 +54,14 @@
 						"price": "10",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 2,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tee",
 				"options" : [
 					{
@@ -70,7 +70,7 @@
 						"price": "18",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -78,14 +78,14 @@
 						"price": "9",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 3,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "4 Way",
 				"options" : [
 					{
@@ -94,14 +94,14 @@
 						"price": "28",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 4,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Elbow",
 				"options" : [
 					{
@@ -110,7 +110,7 @@
 						"price": "35",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -118,7 +118,7 @@
 						"price": "13",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 2,
@@ -126,7 +126,7 @@
 						"price": "12",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				
 				]
@@ -136,12 +136,12 @@
 		"id": 1,
 		"title": "1.5",
 		"selected": false,
-		"key": "diameter",
+		"key": "diameters",
 		"category" : [
 			{
 				"id" : 0,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tube", 
 				"option" : [
 					{
@@ -150,14 +150,14 @@
 						"price":"3.58",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 1,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Ferrule",
 				"options" : [
 					{
@@ -166,7 +166,7 @@
 						"price": "3.75",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -174,7 +174,7 @@
 						"price": "3.75",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 2,
@@ -182,14 +182,14 @@
 						"price": "11",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 2,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tee",
 				"options" : [
 					{
@@ -198,7 +198,7 @@
 						"price": "19",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -206,14 +206,14 @@
 						"price": "9",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 3,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "4 Way",
 				"options" : [
 					{
@@ -222,14 +222,14 @@
 						"price": "27",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 4,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Elbow",
 				"options" : [
 					{
@@ -238,7 +238,7 @@
 						"price": "37",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -246,7 +246,7 @@
 						"price": "15",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 2,
@@ -254,7 +254,7 @@
 						"price": "12.5",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				
 				]
@@ -264,12 +264,12 @@
 	  	"id": 2,
 	  	"title": "2",
 	  	"selected": false,
-	  	"key": "diameter",
+	  	"key": "diameters",
 		"category" : [
 			{
 				"id" : 0,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tube", 
 				"option" : [
 					{
@@ -278,14 +278,14 @@
 						"price":"4.53",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 1,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Ferrule",
 				"options" : [
 					{
@@ -294,7 +294,7 @@
 						"price": "4.25",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -302,7 +302,7 @@
 						"price": "4.5",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 2,
@@ -310,7 +310,7 @@
 						"price": "13",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
@@ -326,7 +326,7 @@
 						"price": "25",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -334,14 +334,14 @@
 						"price": "12",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 3,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "4 Way",
 				"options" : [
 					{
@@ -350,14 +350,14 @@
 						"price": "38",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 4,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Elbow",
 				"options" : [
 					{
@@ -366,7 +366,7 @@
 						"price": "19.5",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 2,
@@ -374,7 +374,7 @@
 						"price": "15",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				
 				]
@@ -384,12 +384,12 @@
 		"id": 3,
 		"title": "2.5",
 		"selected": false,
-		"key": "diameter",
+		"key": "diameters",
 		"category" : [
 			{
 				"id" : 0,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tube",
 				"options" : [
 					{
@@ -398,14 +398,14 @@
 						"price": "4.53",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 1,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Ferrule",
 				"options" : [
 					{
@@ -414,7 +414,7 @@
 						"price": "5.5",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			}]
@@ -423,12 +423,12 @@
 	  	"id": 4,
 	  	"title": "3",
 	  	"selected": false,
-	  	"key": "diameter",
+	  	"key": "diameters",
 		"category" : [
 			{
 				"id" : 0,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tube",
 				"options" : [
 					{
@@ -437,14 +437,14 @@
 						"price": "4.53",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 1,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Ferrule",
 				"options" : [
 					{
@@ -453,14 +453,14 @@
 						"price": "7",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 2,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Tee",
 				"options" : [
 					{
@@ -469,7 +469,7 @@
 						"price": "39",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					},
 					{
 						"id": 1,
@@ -477,14 +477,14 @@
 						"price": "10",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			},
 			{
 				"id" : 3,
 				"selected" : false,
-				"key" : "part",
+				"key" : "parts",
 				"title" : "Elbow",
 				"options" : [
 					{
@@ -493,7 +493,7 @@
 						"price": "31",
 						"unit": "foot",
 						"selected": false,
-						"key": "option"
+						"key": "options"
 					}
 				]
 			}]

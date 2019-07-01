@@ -60,7 +60,8 @@ class Form extends React.Component {
 	 *
 	 */
 	resetThenSet = (id, key) => {
-		let temp = JSON.parse(JSON.stringify(this.state[key]))
+		console.log(key);
+		let temp = JSON.parse(JSON.stringify(this.state.form[key]))
 		temp.forEach(item => item.selected = false);
 		temp[id].selected = true;
 		this.setState({
@@ -82,7 +83,7 @@ class Form extends React.Component {
 								<p>Diameter:</p>
 							</div>
 							<Dropdown
-								title="Select diameter"
+								title="Select Diameter"
 								list = {this.state.form.diameters}
 								resetThenSet={this.resetThenSet}
 							/>
@@ -93,7 +94,7 @@ class Form extends React.Component {
 								<p>Part:</p>
 							</div>
 							<Dropdown
-								title="Select part"
+								title="Select Part"
 								list = {this.state.form.parts}
 								resetThenSet={this.resetThenSet}
 							/>
@@ -101,11 +102,11 @@ class Form extends React.Component {
 								
 						<div className="wrapper">
 							<div className="dd-label">
-								<p>Length:</p>
+								<p>Option:</p>
 							</div>
 								<Dropdown
-									title="Select length"
-									list = {this.state.form.lengths}
+									title="Select Option"
+									list = {this.state.form.options}
 									resetThenSet={this.resetThenSet}
 								/>
 						</div>
