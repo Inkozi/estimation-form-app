@@ -4,10 +4,13 @@ input {
 	font-family : "Lucida Console", Monaco, monospace; 
 	font-size: 25px;
 	background-color: 'white';
-	height: 35px;
+	height: 40px;
 	direction: rtl;
 	clear: both;
 	position: relative;
 	width: 222px;
+	margin-top: 7px;
+	margin-right: 500px; 
+
 }
 

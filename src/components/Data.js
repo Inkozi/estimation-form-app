@@ -1,7 +1,20 @@
 import React from 'react';
 import Form from './Form';
+import '../styles/form.css';
 var data = require("./parts.json")
 
+
+
+
+const ColorLine = ({ color }) =>(
+	<hr
+		style={{
+			color: color,
+			BackgroundColor: color,
+			height: 1
+		}}
+	/>
+);
 
 class Data extends React.Component{
 	constructor(props){
@@ -95,33 +108,41 @@ class Data extends React.Component{
 	render(){
 		return(
 
+			<div>
+				<h1><u>Estimate </u></h1>
+
 			<div className="data-wrapper">
 				<div className="form">
 					<Form form={this.state.formData[0]} />
 				</div>
-
-				<div className="total">
-					<p>Total: ${this.state.total}</p>
-				</div>
-
+					
 				<button
-					type="button"
-					onClick={this.handleRemove(1)}
-					className="small">
-					Remove Item
+						type="button"
+						onClick={this.add}
+						className="smallAdd">
+						Add Item
 				</button>
 
-				<button
-					type="button"
-					onClick={this.add}
-					className="small">
-					Add Item
-				</button>
-						
-				<div className="total">
-					<p>Total: ${this.state.total}</p>
-				</div>
+				<div className="results">
+					
+					<div className="hrResults">
+						<ColorLine color="black" />
+					</div>
+
+					<div className="total">
+						<p>Total: ${this.state.total}</p>
+					</div>
+				
+					<button
+						type="button"
+						onClick={this.add}
+						className="smallSubmit">
+						Submit Item(s)
+					</button>
+					
+					</div>
 			</div>
+		</div>
 
 		);
 	}

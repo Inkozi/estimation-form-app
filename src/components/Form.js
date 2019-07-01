@@ -8,7 +8,8 @@ const ColorLine = ({ color }) =>(
 		style={{
 			color: color,
 			BackgroundColor: color,
-			height: 5
+			height: 1,
+			width: "100%"
 		}}
 	/>
 );
@@ -51,6 +52,10 @@ class Form extends React.Component {
 	}
 
 
+	handleRemove(idx){
+	
+	}
+
 	/*
 	 *
 	 *
@@ -74,7 +79,14 @@ class Form extends React.Component {
 	render() {
 		return (
 			<div>
-				<h1> Part Estimation Form </h1>
+					<h3> Item </h3>
+					<button
+						type="button"
+						onClick={this.handleRemove(1)}
+						className="smallRemove">
+						Remove Item
+					</button>
+
 				<ColorLine color="black" />
 					<form>
 
@@ -118,11 +130,12 @@ class Form extends React.Component {
 							<NumberBox />
 						</div>
 
+						<div className="price">
+							<p>Price:  ${this.state.form.total}</p>
+						</div>
+					
 						<ColorLine color="black" />
 
-						<div className="results">
-							<p>Price:  ${this.state.price}</p>
-						</div>
 						
 					</form>
 			</div>
