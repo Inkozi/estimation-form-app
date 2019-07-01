@@ -17,6 +17,7 @@ const ColorLine = ({ color }) =>(
 class Form extends React.Component {
 	constructor(props) {
 		super(props);
+			this.timer = null;
 			this.state = { form : this.props.form };
 	}
 
@@ -28,14 +29,74 @@ class Form extends React.Component {
 	 *
 	 */
 	poll(){
-		for (var i = 0; i < 6; i++){
-			if (this.state.diameter == i){
-				var idx = this.props[i];
-				var part = idx.category[i];
+		if (this.updateParts()) {
+			this.updateOptions();
+		}
+		this.updatePrice();
+	}
+
+	/*
+	 *
+	 *	fxn :: updateParts()
+	 *		updates parts list depending on the diameter
+	 *
+	 */
+	updateParts(){
+		let found = false;
+		for (var item = 0; item < this.state.form.diameters.length; item++){
+			if (this.state.form.diameters[item].selected == true){
+				this.state.form.parts = this.state.form.diameters[item].category;
+				this.setState({}) //hack to re-render page;
+				found = true;
+			}
+		}
+		return found;
+	}
+
+	/*
+	 *
+	 *	fxn :: updateOptions()
+	 *		updates options list depending on parts;
+	 *
+	 */
+	updateOptions(){
+		for (var item = 0; item < this.state.form.parts.length; item++){
+			if (this.state.form.parts[item].selected == true){
+				this.state.form.options = this.state.form.parts[item].options;
+				this.setState({}) //hack to re-render page;
 			}
 		}
 	}
 
+	updatePrice(){
+		for (var item = 0; item < this.state.form.options.length; item++){
+			if (this.state.form.options[item].selected == true){
+				this.state.form.total = this.state.form.options[item].price;
+			}
+		}
+
+	}
+
+	/*
+	 *
+	 *	fxn :: componentDidMount
+	 *		Invokes a timer to poll changes and updates dropboxes.
+	 *
+	 */
+	componentDidMount() {
+		this.timer = setInterval(() => this.poll(), 100);
+	}
+
+	/*
+	 *
+	 *	fxn :: componentWillUnmount
+	 *		Clears timer;
+	 *
+	 */
+	componentWillUnmount(){
+		clearInterval(this.timer);
+		this.timer = null;
+	}
 
 	/*
 	 *
@@ -65,14 +126,13 @@ class Form extends React.Component {
 	 *
 	 */
 	resetThenSet = (id, key) => {
-		console.log(key);
 		let temp = JSON.parse(JSON.stringify(this.state.form[key]))
-		temp.forEach(item => item.selected = false);
-		temp[id].selected = true;
+		this.state.form[key].forEach(item => item.selected = false);
+		this.state.form[key][id].selected = true;
 		this.setState({
 			[key]: temp
-
 		})
+		console.log(this.state.form);
 	}
 
 	//renders the form that changes with the state
