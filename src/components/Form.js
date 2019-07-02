@@ -119,10 +119,6 @@ class Form extends React.Component {
 	}
 
 
-	handleRemove(idx){
-	
-	}
-
 	/*
 	 *
 	 *
@@ -146,15 +142,8 @@ class Form extends React.Component {
 		return (
 			<div>
 					<h3> Item </h3>
-					<button
-						type="button"
-						onClick={this.handleRemove(1)}
-						className="smallRemove">
-						Remove Item
-					</button>
-
 				<ColorLine color="black" />
-					<form>
+					<form onSubmit={e => {e.preventDefault(); }}>
 
 						<div className="wrapper">
 							<div className="dd-label">
@@ -193,7 +182,7 @@ class Form extends React.Component {
 							<div className="dd-label">
 								<p> Quantity: </p>
 							</div>
-							<NumberBox />
+							<NumberBox number={this.state.form.quantity} />
 						</div>
 
 						<div className="price">

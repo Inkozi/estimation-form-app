@@ -5,12 +5,11 @@ input {
 	font-size: 25px;
 	background-color: 'white';
 	height: 40px;
-	direction: rtl;
 	clear: both;
 	position: relative;
 	width: 222px;
 	margin-top: 7px;
 	margin-right: 500px; 
-
+	padding-left: 20px;
 }
 

@@ -5,7 +5,7 @@ class NumberBox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      number: ''
+      number: this.props.number
     }
   }
   
@@ -15,6 +15,7 @@ class NumberBox extends Component {
 		evt.target.value :
 		this.state.number;
     this.setState({ number });
+	console.log(this.state.number);
   }
   
   render() {

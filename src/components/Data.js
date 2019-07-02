@@ -28,6 +28,9 @@ class Data extends React.Component{
 		this.timer = null;
 		this.state.templateData.push(this.getDefaultTemplate());
 		this.state.formData.push(this.getDefaultForm());
+		this.handleAdd = this.handleAdd.bind(this);
+		this.handleRemove = this.handleRemove.bind(this);
+
 	//	console.log(this.state.formData[0]);
 	}
 
@@ -124,14 +127,19 @@ class Data extends React.Component{
 	}
 
 	handleAdd(){
-	
-	
+		this.state.templateData.push(this.getDefaultTemplate());
+		this.state.formData.push(this.getDefaultForm());
 	}
 
 	handleRemove(idx){
-	
+		if (this.state.formData.length > 1){
+			this.state.formData = this.state.formData.filter((s, sidx) => idx !== sidx);
+		}
 	}
 
+	handleSubmit(){
+
+	}
 
 	/*
 	 *
@@ -146,13 +154,27 @@ class Data extends React.Component{
 				<h1><u>Estimate </u></h1>
 
 			<div className="data-wrapper">
-				<div className="form">
-					<Form form={this.state.formData[0]} />
+			{this.state.formData.map((form, idx) => (
+				<div>
+					<div className="form">
+						<Form form={this.state.formData[idx]} />
+					</div>
+
+					<div>
+						<button
+							type="button"
+							onClick={() => {this.handleRemove(idx) }}
+							className="smallRemove">
+							Remove Item
+						</button>
+					</div>
 				</div>
+
+			))}
 					
 				<button
 						type="button"
-						onClick={this.add}
+						onClick={this.handleAdd}
 						className="smallAdd">
 						Add Item
 				</button>
@@ -169,7 +191,7 @@ class Data extends React.Component{
 				
 					<button
 						type="button"
-						onClick={this.add}
+						onClick={this.handleSubmit}
 						className="smallSubmit">
 						Submit Item(s)
 					</button>
