@@ -25,9 +25,43 @@ class Data extends React.Component{
 			formData : [],
 			total : 0
 		}
+		this.timer = null;
 		this.state.templateData.push(this.getDefaultTemplate());
 		this.state.formData.push(this.getDefaultForm());
 	//	console.log(this.state.formData[0]);
+	}
+
+
+	poll(){
+		let totalSum = 0;
+		for (var form = 0; form < this.state.formData.length; form++){
+			totalSum += parseFloat(this.state.formData[form].total);
+			if (totalSum != this.state.total){
+				this.state.total = parseFloat(totalSum);
+			}
+			this.setState({}); //hack to update render
+		}
+	}
+
+	/*
+	 *
+	 *	fxn :: componentDidMount
+	 *		Invokes a timer to poll changes and updates dropboxes.
+	 *
+	 */
+	componentDidMount() {
+		this.timer = setInterval(() => this.poll(), 100);
+	}
+
+	/*
+	 *
+	 *	fxn :: componentWillUnmount
+	 *		Clears timer;
+	 *
+	 */
+	componentWillUnmount(){
+		clearInterval(this.timer);
+		this.timer = null;
 	}
 
 	/*
@@ -63,7 +97,7 @@ class Data extends React.Component{
 				master : this.state.templateData[args.master],
 				diameters : this.state.templateData[args.master].parts,
 				parts : this.state.templateData[args.master].parts[args.diameter].category,
-				options : this.state.templateData[args.master].parts[args.diameter].category[args.part].option,
+				options : this.state.templateData[args.master].parts[args.diameter].category[args.part].options,
 				quantity : 0,
 				total : 0
 		}

@@ -68,6 +68,12 @@ class Form extends React.Component {
 		}
 	}
 
+	/*
+	 *
+	 *	fxn : updatePrice
+	 *		updates price for the item
+	 *
+	 */
 	updatePrice(){
 		for (var item = 0; item < this.state.form.options.length; item++){
 			if (this.state.form.options[item].selected == true){
