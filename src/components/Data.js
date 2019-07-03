@@ -31,7 +31,6 @@ class Data extends React.Component{
 		this.handleAdd = this.handleAdd.bind(this);
 		this.handleRemove = this.handleRemove.bind(this);
 
-	//	console.log(this.state.formData[0]);
 	}
 
 

@@ -60,6 +60,7 @@ class Form extends React.Component {
 	 *
 	 */
 	updateOptions(){
+		let part = "";
 		for (var item = 0; item < this.state.form.parts.length; item++){
 			if (this.state.form.parts[item].selected == true){
 				this.state.form.options = this.state.form.parts[item].options;
@@ -77,10 +78,33 @@ class Form extends React.Component {
 	updatePrice(){
 		for (var item = 0; item < this.state.form.options.length; item++){
 			if (this.state.form.options[item].selected == true){
-				this.state.form.total = this.state.form.options[item].price;
+				let num = this.state.form.options[item].price * this.state.form.quantity + this.calcDependencies();
+				this.state.form.total = Math.ceil(num * 100) / 100; 
 			}
 		}
+	}
 
+	updateQuantity = (number) => {
+		this.state.form.quantity = number;
+	}
+
+	/*
+	 *
+	 *	fxn : calcDependencies
+	 *		calculates dependcies for ferrules (gaskets && clamps)
+	 *		Missing is EPDM & Standard;
+	 *
+	 */
+	calcDependencies(){
+		let result = 0;
+		for (let item = 0; item < this.state.form.parts.length; item++){
+			if (this.state.form.parts[item].selected == true){
+				if(this.state.form.parts[item] == "Ferrule"){
+					result = Math.ceil(parseInt(this.state.form.quantity) * 1.1);
+				}
+			}
+		}
+		return result;
 	}
 
 	/*
@@ -134,8 +158,8 @@ class Form extends React.Component {
 		this.setState({
 			[key]: temp
 		})
-		console.log(this.state.form);
 	}
+
 
 	//renders the form that changes with the state
 	render() {
@@ -182,7 +206,12 @@ class Form extends React.Component {
 							<div className="dd-label">
 								<p> Quantity: </p>
 							</div>
-							<NumberBox number={this.state.form.quantity} />
+							
+							<NumberBox 
+								number={this.state.form.quantity} 
+								updateQuantity={this.updateQuantity}
+							/>
+						
 						</div>
 
 						<div className="price">

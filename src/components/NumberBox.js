@@ -10,12 +10,9 @@ class NumberBox extends Component {
   }
   
   handleChange(evt) {
-	const number = 
-		(evt.target.validity.valid) ?
-		evt.target.value :
-		this.state.number;
+	const number = (evt.target.validity.valid) ? evt.target.value : this.state.number;
     this.setState({ number });
-	console.log(this.state.number);
+	this.props.updateQuantity(number);
   }
   
   render() {
